@@ -1,3 +1,4 @@
+//Backend logic
 var leapYear = function(year) {
   if ((year % 100 !== 0) && (year % 4 === 0) || (year % 400 === 0)) {
     return true;
@@ -6,11 +7,10 @@ var leapYear = function(year) {
     }
 };
 
-
-
-
+//Front end logic
 $(document).ready(function() {
   $("form#leap-year").submit(function(event) {
+
     event.preventDefault();
     var year = parseInt($("input#year").val());
     var result = leapYear(year);
